@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	
+var aniversario = new Date('06/27/1991 23:59:59');
+
+var validarAniversario = function(aniversario){
+	var hoje = new Date();
+	return hoje.getDate() == aniversario.getDate() && hoje.getMonth() == aniversario.getMonth();
+}
+
+var diasAniversario = function(aniversario){
+	var hoje = new Date();
+
+	aniversario.setFullYear(hoje.getFullYear());
+
+	if(+hoje > +aniversario){
+		aniversario.setFullYear(hoje.getFullYear()+1);//caso a data tenha passado, somas 1 no ano
+	}
+
+	var um_dia_ms = 1000 * 60 * 60 * 24;
+
+	return Math.floor(Math.abs(+hoje - +aniversario)/um_dia_ms)//math.abs garante que o valores seja sempre positivo
+}
+
+if(validarAniversario(aniversario)){
+	document.write('Feliz Aniversario.'.big());
+}else{
+	document.write('Faltam ' +diasAniversario(aniversario)+' dias.');
+}
+
+</script>

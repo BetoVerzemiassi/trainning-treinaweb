@@ -1,0 +1,46 @@
+<script type="text/javascript">
+	//aritméticos 
+	console.log(10 + 10);
+	console.log('10' + 10);//concatena os valores 1010, operador que não aplica a conta 
+
+	console.log(10 - 10 - 9);
+	console.log('10' - 10);//0, faz o calculo, menos o operador + não resolve
+
+	console.log(10 * 10);//100
+	console.log('10' * 10);//100
+
+	console.log(10 / 10);
+	console.log('10' / 10);
+
+	console.log(10 % 9);//% representa MOD, resto da divisão
+	console.log('10' % 9);
+
+	var idade = 17;
+	console.log(--idade);//colocar ++idade "incrementa", idade++ "incrementa na próxima interação"
+	console.log(idade);
+
+	console.log(10 + 10 * 10);//110, multiplicação tem prioridade
+	console.log((10 + 10) * 10);//200 agora prioridade entre parentese
+
+	//operadores de atribuição
+	//feitos para passar valores da direita para esquerda
+	var idade = 17;
+	
+	idade += 10;//+= queremos samor o valor da direita com o valor atual da direita.
+	idade -= 17;
+	idade /= 10;
+	idade *= 10;
+	idade %= 9;
+	console.log(idade);
+
+	//comparando valores
+	console.log('Alberto' != 'Elaine');//dois == estamos comparando só valor interno
+	console.log('10' !== 10);//quando for === comparando valor e seu tipo
+	console.log(10 >= 9);
+
+	//operadores lógicos
+	var idade = 16;
+	var nacionalidade = 'br';
+	console.log(idade >= 18 && nacionalidade == 'br' || (10 >= 9 && 8 < 10));// && as duas comparações precisam ser verdades para que o todo seja verdadeiro, || somente uma das operações precisa ser verdadeiro, para conseguir resultado verdadeiro, () prioridade de comparação
+
+</script>

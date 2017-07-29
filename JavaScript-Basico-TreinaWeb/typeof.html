@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	
+	var nome = 'Alberto';
+	var idade = 17;
+	var boo = true;
+	var curso = {};//objeto literal
+	var alunos = [];//array literal, também visto como objeto
+	var obj = new Object();//objeto criado através de construtores
+
+	console.log(typeof 'Alberto');//nome
+	console.log(typeof idade);
+	console.log(typeof boo);
+	console.log(typeof curso);
+	console.log(typeof alunos);
+	console.log(typeof obj);
+
+	//convertendo um tipo para outro
+	var idade = '17';
+	console.log(typeof idade);//retornou uma string
+	console.log(idade + 10);//concatenou 1710
+	console.log(typeof parseFloat(idade));//retornou um number
+	//converter para number parseInt, parseFloat
+
+	//transformar algo que não é string em string
+	var alunos = ['Alberto','Elaine','Samirys'];
+	console.log(typeof alunos);//retorno object
+	console.log(typeof alunos.toString());//método pertencente ao Object, retorna uma string
+
+	//booleanos conversões 
+	//undefined, '', null, 0
+	if(!undefined){//false, if não será executado
+		console.log('Não será executado');
+	}
+
+
+
+</script>

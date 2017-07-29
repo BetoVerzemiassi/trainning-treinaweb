@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	
+	//JSON = notação literal para criar objetos em javascript
+
+	var curso = {
+		nome: 'javascript',
+		ativo: true,
+		alunos: ['Andre','Joao'],
+		getAlunos: function(){
+			for(index in this.alunos){//this indica curso.alunos
+				console.log(this.alunos[index]);//index = indice / this referencia a instancia do objeto curso
+			}
+		}
+	};
+
+	/*executando a função para mostrar os alunos
+	curso.getAlunos();
+	*/
+	//curso.ativo = true;//criou uma propriedade no objeto literal, podiamos criar direto no objeto ativo: true
+
+	//console.log(curso.ativo);//curso.nome
+
+	//como deletar propriedade de um objeto
+	//console.log(curso.hasOwnProperty('ativo'));//verifica se uma propriedade existe dentro do objeto
+	delete curso.ativo;
+	console.log(curso);
+	//console.log(curso.hasOwnProperty('ativo'));
+
+
+	//como acessar valores dentro de um JSON
+	curso.nome = 'JSON';//trocando o nome do objeto
+	console.log(curso.nome);
+
+	//podemos usar a notação de array para acessar uma propriedade de um objeto
+	var chave = 'nome';//chave equivale a string nome
+	console.log(curso['no'+'me']);//vantagem de passar nome como string, pode ser concatenando 'no'+'me'
+
+	//como iterar sobre um objeto
+	for(chave in curso){
+		console.log(curso[chave]);//podemos acessar na notação de array console.log(curso[chave]);
+	}
+
+</script>

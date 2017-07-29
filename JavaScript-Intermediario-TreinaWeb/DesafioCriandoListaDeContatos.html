@@ -1,0 +1,59 @@
+<script type="text/javascript">
+	
+/*
+1- Crie um JSON para ser a referência do objeto AGENDA;
+2- No objeto agenda coloque um atributo chamado CONTATOS que guarda um array de objetos CONTATO;
+3- Crie um constructor novo com uma função, e o chame de Contato;
+4- O objeto CONTATO deve conter nome, endereço, telefone, e-mail e página(website pessoal);
+5- Para finalizar crie dois métodos para adicionar novos contatos, e um para remover um contato;
+*/
+
+var agenda = {
+	nome: 'Contatos Pessoais',
+	contatos: [],
+	adicionar: function(contato){
+		if(contato.nome && contato.telefone && contato.email){
+			this.contatos.push(contato);
+		}else{
+			console.log('Erro ao adicionar o novo contato.');
+		}
+	},
+	remover: function(nome){
+		for(indice in this.contatos){
+			var contato = this.contatos[indice];
+			if(contato.nome === nome){
+				this.contatos.splice(indice,1);
+				return true;
+			}
+		}
+		return false;
+	},
+	listar: function(){
+		for(indice in this.contatos){
+			var contato = this.contatos[indice];
+			if(contato.pagina){
+				console.log(contato.nome+' '+contato.telefone+' '+contato.email+' '+contato.pagina);
+			}else{
+				console.log(contato.nome+' '+contato.telefone+' '+contato.email);
+			}
+		}
+	}
+};
+
+agenda.adicionar({
+	nome: 'Alberto',
+	telefone: '97458-3300',
+	email: 'alberto@email.com',
+	pagina: 'www.alberto.com.br'
+});
+
+agenda.adicionar({
+	nome: 'Elaine',
+	telefone: '99981-8686',
+	email: 'elaine@email.com'	
+});
+
+console.log(agenda.remover('José'));
+agenda.listar();
+
+</script>

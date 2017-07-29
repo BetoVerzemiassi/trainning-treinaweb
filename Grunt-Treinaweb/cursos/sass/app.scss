@@ -1,0 +1,13 @@
+@import "compass/css3";
+
+// Importa o arquivo de configuração do Foundation
+@import "settings";
+
+// Importa todos os estilos do Foundation
+@import "foundation";
+
+// Usa o Mixin CSS3 de boxShadow do Compass: http://compass-style.org/reference/compass/css3/
+
+.cursos{
+  @include box-shadow(rgba(#F30, 0.3) 0 0 25px);
+}

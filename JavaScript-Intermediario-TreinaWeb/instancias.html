@@ -1,0 +1,53 @@
+<script type="text/javascript">
+
+/*
+var Carro = function(nome){//Carro é um construtor
+	this.nome = nome;
+}
+
+var carro1 = new Carro('Gol');
+var carro2 = new Carro('Palio');
+
+console.log(carro1.nome);//retorno Gol
+console.log(carro2.nome);//retorno Palio
+*/
+
+/*Outro método construtor*/
+
+/*
+var obj = new Object();
+
+obj.nome = 'JavaScript';
+
+console.log(obj);//Object
+console.log(typeof obj);//object
+*/
+
+
+/*Objeto literal*/
+
+var obj = {
+	nome:'JavaScript'
+};
+
+Object.defineProperty(obj,'idade',{
+	configurable: false,
+	enumerable: true,
+	value: 17,
+	writable: false
+});
+
+delete obj.idade;
+obj.idade = 18;
+
+for(chaves in obj){
+	console.log(chaves);
+}
+
+console.log(obj);//Object
+console.log(typeof obj);//object
+
+
+
+
+</script>

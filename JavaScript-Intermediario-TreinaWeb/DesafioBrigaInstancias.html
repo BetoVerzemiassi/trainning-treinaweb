@@ -1,0 +1,79 @@
+<script type="text/javascript">
+	
+/*
+1- Criar 3 Objetos (Pessoa, Carro, Pássaro)
+2- Os atributos de cada objeto deve ser:
+	(
+		Pessoa: nome, idade
+		Carro: cor, ano
+		Pássaro: cor, tamanho
+	)
+3- Os atributos do tipo cor, tanto para pássaro quanto para carro, devem ser atribuidos ao objeto em tempo de execução, e não na sua definição, além de não poderem ser deletados.
+4- Cria uma instância de cada objeto, e uma referência duplicada cada.
+5- Altere um dos valores de cada uma das instancias, e imprima no console o valor alterado, através da segunda referência de cada instância.
+*/
+
+var Pessoa = function(nome, idade){
+	this.nome = nome
+	this.idade = idade
+}
+
+var Carro = function(cor, ano){	
+	this.ano = ano
+}
+
+var Passaro = function(cor, tamanho){	
+	this.tamanho = tamanho
+}
+
+/*Criando instâncias*/
+var pessoa = new Pessoa('Alberto', 25);
+var carro = new Carro('Preto', 2014);
+var passaro = new Passaro('Branco', 10); 
+
+/*passo 4*/
+/*Criando variável que faz referência a variavel pessoa*/
+
+
+/*Referências duplicadas*/
+var pessoa2 = pessoa;
+var carro2 = carro;
+var passaro2 = passaro;
+
+Object.defineProperty(carro,'cor',{
+	configurable: false, 
+	value: 'Preta'
+});
+
+Object.defineProperty(passaro,'cor',{
+	configurable: false, 
+	value: 'Branca'
+});
+
+delete carro.cor;
+delete passaro.cor;
+
+pessoa2.nome = 'Daniel';
+
+console.log(pessoa2.nome);
+console.log(carro2.cor);
+console.log(passaro2.cor);
+
+/*
+console.log(carro);
+console.log(passaro);
+*/
+
+/*
+carro.cor = 'Preto';
+passaro.cor = 'Branco';
+
+delete carro.cor;
+delete passaro.cor;
+*/
+/*
+console.log(carro);
+console.log(passaro);
+*/
+
+</script>

@@ -1,0 +1,28 @@
+<script type="text/javascript">
+	
+	/*Econtre o TreinaWeb*/
+
+	var textoGigante = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis justo dolor. Nulla facilisi. Vestibulum finibus eu justo eget elementum. Curabitur molestie ullamcorper risus, a eleifend magna. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibust TreinaWeb. Curabitur bibendum eu est consequa maximus. Nulla facilisi. In massa nisi, vestibulum ut cursus et, congue vitae nunc. Duis nunc magna, semper ut leo sed.';
+
+	// 1º forma
+	//var nome = 'TreinaWeb';
+	//var indice = textoGigante.indexOf(nome);//293
+	//console.log(textoGigante.slice(indice, indice+nome.length));	
+
+
+
+	// 2º forma de resolver
+	//var resultado = textoGigante.match('TreinaWeb');//match quando não encontra, retorna null
+	//console.log(resultado[0]);
+	
+
+	// 3º forma
+	var palavras = textoGigante.split(' ');
+	console.log(palavras);
+	for(var i = 0; i<palavras.length; i++){
+		if(palavras[i] === 'TreinaWeb.'){
+			console.log(palavras[i]);
+		}
+	}
+
+</script>

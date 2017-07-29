@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "description": "Um simples projeto utilizando Grunt e Bower",
+  "main": "index.html",
+  "authors": [
+    "Treinaweb Cursos"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#^4.1.1",
+    "jquery": "^3.0.0",
+    "masonry": "^4.1.0"
+  }
+}

@@ -1,0 +1,57 @@
+<script type="text/javascript">
+	
+	/*
+	Você já imaginou a confusão que seria se um caixa eletrônico não tratasse erros, como por exemplo,
+	tentar sacar 1000 de uma conta que só tem o limite de 100 ? Espero que no nosso caixa isso não 
+	seja possível, afinal é para isso que estamos lhe contatando. Ficamos sabendo que você entende sobre tratamentos de erros, e precisamos implementar o seguinte erro ao sistema de caixa eletrônico.
+
+	- Não permitir saque se o cliente não tiver o valor desejado.
+
+	Regras:
+		- Criar um JSON para representar a conta que está sendo utilizada para fazer saques;
+		- Utilizar throw e try catch;
+		- Criar um método para saque, que receba como parâmetro, a conta em que ira sacar, e o valor desejado;
+	*/
+
+	var contas = [
+		{
+			nome: 'Felipe',
+			numero: 123453,
+			valor: 10000.00
+		},
+		{
+			nome: 'Gustavo',
+			numero: 873643,
+			valor: 8000.00
+		},
+		{
+			nome: 'Sara',
+			numero: 983724,
+			valor: 100000.00
+		}
+	];
+
+var sacar = function(numero, valor){
+	for(indice in contas){
+		var conta = contas[indice];
+		if(conta.numero === numero){
+			if(conta.valor >= valor){
+				conta.valor -= valor;
+				return valor;
+			}else{
+				throw new Error('O valor de '+valor+' nao pode ser retirado');
+			}
+		}
+	}
+	throw new Error('A conta nao existe: '+numero);
+}
+
+
+try{
+	alert(sacar(123453,100));
+}catch(e){
+	alert(e.message);
+	console.log(e.stack);
+}
+
+</script>

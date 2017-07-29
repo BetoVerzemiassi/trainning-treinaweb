@@ -1,0 +1,22 @@
+<script type="text/javascript">
+	
+var tanque = 999;
+
+var abastecer = function(){
+	if(tanque < 1000){
+		tanque++;
+	}else{
+		throw {message: 'Tanque ja esta cheio'};
+	}
+}
+
+try{
+	abastecer();
+	abastecer();
+}catch(e){
+	alert(e.message);
+}
+
+console.log('TreinaWeb');
+	
+</script>

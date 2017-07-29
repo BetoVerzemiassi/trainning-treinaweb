@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	
+/*var hoje = new Date();//como não passamos nenhum parâmetro, irá mostrar a data atual
+
+console.log(hoje);
+console.log(typeof hoje);//verificando o tipo de variável Date, será um objeto
+*/
+
+
+/*
+//como verificar uma data que já se foi com uma string especialmente formatada
+var aniversario = new Date('01/22/1994 15:23:35');//mês/dia/ano verificando horas, podemos usar '22 jan 1994'
+console.log(aniversario);
+*/
+
+
+/*
+Como criar uma data formatada
+
+var hoje = new Date();
+
+//podemos setar valores
+//hoje.setFullYear(1994);//aqui mudamos o ano, mesmo após ter criado a data
+
+var dia = hoje.getDate();//retorna o dia do mês, podemos pegar o dia com getDay()
+var mes = hoje.getMonth() + 1;//retorna o mês, sempre soma 1 para conseguir resultado correto, pq é base 0
+var ano = hoje.getFullYear();//retorna o ano
+
+var hora = hoje.getHours();//retorna o horário
+var minuto = hoje.getMinutes();//retorna os minutos
+var segundos = hoje.getSeconds();//retorna os segundos
+
+console.log(dia+'/'+mes+'/'+ano);//mostrando as informações na tela, concatenando-as
+console.log(hora+':'+minuto+':'+segundos);//mostrando as informações na tela, concatenando-as
+
+
+var diasSemana = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sabado'];
+var diaSemana = hoje.getDay();//base 0, temos que criar um array
+console.log(diasSemana[diaSemana]);//mostrou dia 5, pois setamos o ano de 1994
+*/
+
+
+//comparação de datas, para ver se são iguais
+var data1 = new Date('01/22/1994');
+var data2 = new Date('01/22/1994');
+
+if(+data1 === data2.getTime()){//para conseguir comparar data, temos que ultilizar o getTime(), para verificar os milisegundos data1.getTime() === data2.getTime()
+	alert('Data Iguais');
+}
+
+
+
+/*
+Uma outra forma de resolver o getTime(), colocamos o sinal de + a frente da variável data2 por exemplo
+if(+data1 === +data2), ultilizando >= no if(data1 >= data2), não precisamos converter os milisegundos
+*/
+
+</script>

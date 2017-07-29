@@ -1,0 +1,49 @@
+<script type="text/javascript">
+	
+	//declaração de função
+	function imprimirMensagem(msg){
+		console.log(msg);
+	}
+
+	imprimirMensagem('Mensagem Teste');
+
+	//expressão de função, acossiadas a variáveis ou a atributos de objetos
+	var imprimirMensagem = function(msg){
+		console.log(msg);
+	} 
+
+	imprimirMensagem('Mensagem de Teste de Expressão de Função')
+
+
+	//sacar dinheiro de conta
+	var contas = [
+		{
+			nome: 'Alberto',
+			conta: 123456,
+			valor: 1000.00
+		}
+	]
+
+	var sacar = function(contas, numero, valor){
+		for(index in contas){
+			var conta = contas[index];
+			if(conta.conta == numero){
+				if(valor <= conta.valor){
+					console.log('Você pode Sacar esse valor');
+				}else{
+					console.log('Você não pode Sacar esse valor. Sua conta tem o valor de '+conta.valor);
+				}
+			}else{
+				console.log('O número informado não corresponde a nenhuma conta.');
+			}
+		}
+	}
+
+	sacar(contas, 123457, 5000);
+
+</script>
+
+
+
+
+    

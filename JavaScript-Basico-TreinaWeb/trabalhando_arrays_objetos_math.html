@@ -1,0 +1,95 @@
+<script type="text/javascript">
+
+/*	
+var nomes = ['Jose','Maria'];//array em sua forma literal []
+
+//como acessar os valores
+console.log(nomes[0]);
+console.log(nomes[1]);
+
+//propriedade que nos informa quantos elementos existem em nosso array
+console.log(nomes.length);
+
+//iteração
+for(var i = 0; i < nomes.length; i++){
+	console.log(i);//imprimindo o indice sozinho
+	console.log(nomes[i]);
+}
+*/
+
+/*
+//Array de números, apartir de um construtor de array
+var nomes = new Array(10);//criou 10 casas com valor undefined
+console.log(nomes.length);
+*/
+
+
+//Métodos para trabalhar com arrays
+var nomes = ['Jose','Maria','Joao', 'Kleber'];
+var indice = Math.floor(Math.random() * nomes.length);
+
+//valores aleatórios Math.floor: arredonda para baixo 2,7: 2 ceil para cima, Math.random: gera números
+console.log(nomes[indice]);
+
+//potencia
+console.log(Math.pow(3,2));
+
+//raiz
+console.log(Math.sqrt(9));
+
+//constante PI
+console.log(Math.PI);
+
+//constante de euler
+console.log(Math.E);
+
+//var resultado = nomes.indexOf('Ana');//busca por alguem e nos retorna o indice
+
+//var nomes2 = ['Ana','Ailton','Joaquim'];
+//var todosOsNome = nomes.concat(nomes2);//método para juntar arrays
+/*
+nomes.push('Ailton');//método para filas e pilhas, retirando elementos pop: pilhas e shift: filas
+console.log(nomes.shift());
+*/
+
+
+//revertendo todo o array
+//console.log(nomes.reverse());
+
+//join retira do array, exemplo a virgula e colocar um e nos parenteses
+//console.log(nomes.join(' e '));
+
+//como cortar um array, tirar determinado trecho de um array
+//console.log(nomes.slice(0,2));
+
+//como ordenar um array, tanto números ou nomes
+//var nomes = [23,24,2,1,15,16]
+//console.log(nomes.sort(function(a,b){return a-b}));//organizou nosso array em ordem alfabética, para ordem decrescente basta colocar return -(a-b)
+
+//adicionando novos elementos a um array
+//nomes.splice(2,3,'Antonio','Fernando');//["Jose", "Maria", "Antonio", "Fernando"]
+//console.log(nomes);
+
+
+
+
+
+
+
+
+//console.log(nomes[resultado]);//console.log(resultado);
+//console.log(todosOsNome);
+
+
+
+
+
+
+
+
+
+
+//var clientes = new Array('Jose', 'Maria');//array apartir de um construtor, mesmo resultado
+
+
+</script>

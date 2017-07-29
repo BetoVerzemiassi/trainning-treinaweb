@@ -1,0 +1,47 @@
+<canvas id="desenho" width="500" height="500" style="border:1px solid #000000">	
+</canvas>
+<script type="text/javascript">
+	var canvas = document.getElementById('desenho');
+	var context = canvas.getContext('2d');
+
+	/*
+	context.beginPath();//novo desenho
+	context.fillStyle = '#34af56';//fillStyle = preenchido strokeStyle = somente contorno
+	context.rect(100,100,40,50);//cria retângulo
+	context.fill();//desenhando
+
+	context.beginPath();
+	context.fillStyle = '#000000';//fillStyle = preenchido strokeStyle = somente contorno
+	context.rect(200,200,40,50);//cria retângulo
+	context.fill();//desenhando
+	*/
+
+	/*Outra Maneira
+
+	context.fillStyle = '#34af56';
+	context.fillRect(200,200,40,50);
+
+	context.fillStyle = '#000000';
+	context.fillRect(100,100,40,50);
+	*/
+
+	/*Criando Circulo
+	context.beginPath();
+	context.fillStyle = '#23f56f';
+	context.arc(100,100,50,0,2 * Math.PI);//cria o circulo
+	context.fill();
+	*/
+
+	/*Texto dentro da Imagem
+	//context.beginPath();
+	context.font = '30px Arial';
+	context.strokeStyle = 'blue';
+	context.strokeText('TreinaWeb',200,200);
+	*/
+
+	/*Fazer uma linha*/
+	context.beginPath();
+	context.moveTo(100,50);
+	context.lineTo(30,40);
+	context.stroke();
+</script>

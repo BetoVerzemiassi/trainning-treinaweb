@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/_config.scss",
+		"../scss/_grid.scss",
+		"../scss/_typography.scss",
+		"../scss/_layout.scss"
+	],
+	"mappings": "AEAA,AAAA,KAAK,AAAA,CACJ,KAAK,CAAE,IAAK,CACZ,SAAS,CDGG,MAAM,CCFlB,MAAM,CAAE,MAAO,CACf,ACJD,AAAA,MAAM,AAAA,CACL,MAAM,CAAE,MAAO,CACf,SAAS,CAAE,IAAK,CAChB,WAAW,CAAE,0BAA2B,CACxC,KAAK,CFHQ,IAAI,CEIjB,UAAU,CAAE,MAAO,CACnB,ACND,AAAA,IAAI,AAAA,CACH,MAAM,CAAE,CAAE,CACV,gBAAgB,CHAG,OAAO,CGC1B,AAED,AAAA,KAAK,AAAA,CACJ,OAAO,CAAE,IAAK,CACd,gBAAgB,CAAE,IAAK,CACvB",
+	"names": []
+}

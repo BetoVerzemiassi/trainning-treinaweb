@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	
+	/*
+	Crie uma função que repita outra função um determinado número de vezes.
+	Regras:
+		- Criar uma função que aceite a quantidade de repetições de outra função.
+		- Criar um tempo de espera entre as repetições.		
+	*/
+	var repetirFuncao = function(repeticao, tempo, funcao){
+		setTimeout(function(){
+			funcao(repeticao);
+			if(repeticao > 1){
+				repetirFuncao(--repeticao, tempo, funcao);
+			}
+		}, tempo);
+	}
+
+	var imprimir = function(repeticao){
+		console.log(repeticao+' TreinaWeb');
+	};
+
+	repetirFuncao(5, 3000, imprimir);
+	
+</script>

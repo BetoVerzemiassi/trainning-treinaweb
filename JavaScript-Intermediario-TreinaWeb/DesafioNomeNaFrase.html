@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Desafio Nome na Frase</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var $nome = $('#txtNome');//document.getElementById()
+			var nome = $nome.val();
+			var frase = nome.concat(' está aprendendo jQuery.');
+			$('#frase').text(frase);
+		});		
+	</script>
+</head>
+<body>
+	<input type="text" id="txtNome" value="Alberto">
+	<p id="frase"></p>
+</body>
+</html>

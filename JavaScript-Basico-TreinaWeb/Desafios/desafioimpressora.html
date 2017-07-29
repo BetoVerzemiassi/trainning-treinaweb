@@ -1,0 +1,49 @@
+<script type="text/javascript">
+	
+var filaDeImpressao = [
+	'Sara',
+	'Bruno',	
+	'Antonio',
+	'Matheus',
+	'Fernando',
+	'Kennedy'
+];
+
+//criando o método construtor
+var Impressora = function(nome, tempoImpressao){
+	var status = 'aguardando';
+	this.trabalhar = function(){
+		var trabalho = setInterval(verificarFila,1000);
+	}
+
+	var verificarFila = function(){
+		if(status === 'aguardando'){
+			status = 'trabalhando';
+			var item = filaDeImpressao.shift();//push() adiciona, shift() tira
+			if(item){
+				imprimir(item);
+			}else{
+				console.log('Fila Vazia');
+				status = 'aguardando';
+			}
+		}else{
+			console.log(nome+': Ocupada');
+		}
+	}
+
+	var imprimir = function(item){
+		var tempoDeImpressao = setTimeout(function(){
+			console.log(nome+': '+item);
+			status = 'aguardando';
+		}, tempoImpressao);
+	}
+}
+
+//criando as impressoras
+var i1 = new Impressora('I1', 2000);
+var i2 = new Impressora('I2', 4000);
+
+i1.trabalhar();
+i2.trabalhar();
+
+</script>

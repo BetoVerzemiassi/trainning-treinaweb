@@ -1,0 +1,6 @@
+{
+	"sass": {
+		"minfile": "public/css/style.min.css",
+		"mainfile": "assets/scss/main.scss"
+	}
+}

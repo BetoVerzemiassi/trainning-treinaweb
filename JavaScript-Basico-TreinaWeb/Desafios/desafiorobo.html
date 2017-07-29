@@ -1,0 +1,55 @@
+<script type="text/javascript">
+	/*
+	- Crie uma função que defina o construtor de um Robo;
+	- Passe pelo construtor os valores iniciais do Robo;
+	- Crie uma luta entre duas instancias do objeto Robo;
+	*/
+
+	//método construtor Robo indica o método construtor pela letra maiuscula
+	//vamos passar um único parametro ao inves de nome, forca, defesa, velocidade
+	var Robo = function(atributos){
+		this.nome = atributos.nome || '';// '' string vazia
+		this.vida = 100;
+		this.atributos = {
+			forca: atributos.forca || 10,
+			defesa: atributos.defesa || 15,
+			velocidade: atributos.velocidade || 20//se não passarmos o velocidade, automaticamente vai atribuir o valor 20
+		}
+
+		this.atacar = function(){
+			return Math.floor(Math.random() * this.atributos.forca)
+		};
+
+		this.defender = function(valorAtaque){
+			var velocidadeEsquiva = Math.floor(Math.random() * this.atributos.velocidade);
+			if(velocidadeEsquiva <= this.atributos.velocidade * 0.9){//esquiva
+				if(this.atributos.defesa < valorAtaque){
+					this.vida -= valorAtaque;	
+				}
+			} 
+		};
+	}
+
+	//atribuindo valores para o robo, por parametros 'Robo1',10,20,30, agora vamos passar um objeto literal
+	var robo = new Robo({
+		nome: 'Robo1',
+		forca: 20,
+		defesa: 30,
+		velocidade: 25
+	});
+
+	var robo2 = new Robo({
+		nome: 'Robo2',
+		forca: 10,
+		defesa: 5,
+		velocidade: 2
+	});
+
+	robo2.defender(robo.atacar());
+
+	console.log(robo2.vida);
+
+	//Math.floor arredondamento de valores
+
+</script>
+
